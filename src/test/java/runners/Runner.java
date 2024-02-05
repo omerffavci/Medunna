@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
         "rerun:TestOutput/failed_scenerio.txt"},
         features = "src/test/resources", //features package'ının yolu (content root)
         glue = {"stepDefinitions","hooks"}, //stepDefinitions package ismi
-        tags = "@UI",//Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
+        tags = "@UI" +
+                "" +
+                "",//Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
         dryRun = false, //true seçersek scenariolari kontrol eder browser'ı çalıştırmaz
         monochrome = true//-->true kullanırsak konsoldaki çıktıları tek renk(siyah) olarak verir
 )
