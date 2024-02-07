@@ -28,9 +28,8 @@ public class Us05_Stepdefinition {
         @Then("Make an Appointment sekmesine tiklar")
         public void makeAnAppointmentSekmesineTiklar() {
 
-           Driver.getDriver().wait(1);
+
             us05.makeAppointmentButton.click();
-            Driver.getDriver().wait(1);
 
         }
 
