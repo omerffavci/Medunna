@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+@ruhi
+>>>>>>> main
 Feature: US_005 Hastalar (patients), hastahaneden randevu (Appointment) oluşturabilmelidir.
 
   #Background: Anasayfa Make an Appointment Test
@@ -10,7 +14,8 @@ Feature: US_005 Hastalar (patients), hastahaneden randevu (Appointment) oluştur
     And SSN numarasi olarak "<SSN>" girer
     And Email adresi olarak "<Email>" girer
     And Telefon numarasi olarak "<Phone>" girer
-    And Appointment Date olarak "<AppointmentDate>" girer
+    #And Appointment Date olarak "<AppointmentDate>" gir
+
     Then Send an Appointment Request butonuna tiklar.
     #And "Appointment registration saved!" onay mesajini gorur.
 
@@ -73,6 +78,9 @@ Feature: US_005 Hastalar (patients), hastahaneden randevu (Appointment) oluştur
       | FirstName | LastName | SSN         | Email              | Phone        | AppointmentDate |
       | Ruhi      | Cikar    | 585-58-5858 | ruhidayi@gmail.com | 1111234444 | 05.02.2024        |
 
+
+
+  @ruhi
    Scenario:TC_5 Kullanici Register olup Siteye girebilmeli ve Randevularini görebilmeli
      Given Kullanici  "medunnaUrl" anasayfaya gider
      And Kullanici sign in butonuna tiklar

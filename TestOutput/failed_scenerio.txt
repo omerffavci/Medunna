@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 file:src/test/resources/ui_features/us.05.feature:20
 file:src/test/resources/ui_features/us.feature:3
+=======
+>>>>>>> main
