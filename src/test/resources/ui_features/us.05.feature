@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 @ruhi
->>>>>>> main
 Feature: US_005 Hastalar (patients), hastahaneden randevu (Appointment) oluşturabilmelidir.
 
   #Background: Anasayfa Make an Appointment Test
