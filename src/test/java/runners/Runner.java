@@ -13,8 +13,16 @@ import org.junit.runner.RunWith;
         "junit:target/xml-report/cucumber.xml",
         "rerun:TestOutput/failed_scenerio.txt"},
         features = "src/test/resources", //features package'ının yolu (content root)
+<<<<<<< HEAD
+        glue = {"stepDefinitions","hooks"}, //stepDefinitions package ismi
+        tags = "@UI" +
+                "" +
+                "",//Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
+=======
+
         glue = {"step_definitions","hooks"}, //stepDefinitions package ismi
-        tags = "@UI",//Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
+        tags = "@ruhi",//Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
+>>>>>>> main
         dryRun = false, //true seçersek scenariolari kontrol eder browser'ı çalıştırmaz
         monochrome = true//-->true kullanırsak konsoldaki çıktıları tek renk(siyah) olarak verir
 )
