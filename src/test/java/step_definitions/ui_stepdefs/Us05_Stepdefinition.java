@@ -11,10 +11,9 @@ import org.openqa.selenium.interactions.Actions;
 import pages.MedunnaPageFth;
 import utilities.ConfigReader;
 import utilities.Driver;
-<<<<<<< HEAD
-=======
+
 import utilities.ReusableMethods;
->>>>>>> main
+
 
 public class Us05_Stepdefinition {
 
@@ -31,11 +30,6 @@ public class Us05_Stepdefinition {
 
         @Then("Make an Appointment sekmesine tiklar")
         public void makeAnAppointmentSekmesineTiklar() {
-
-<<<<<<< HEAD
-
-=======
->>>>>>> main
             us05.makeAppointmentButton.click();
 
         }
@@ -90,33 +84,31 @@ public class Us05_Stepdefinition {
     public void kullaniciRegisterButonunaTiklar() {
 
         us05.giriskismi.click();
-<<<<<<< HEAD
+
 
         us05.signIn.click();
-=======
+
         ReusableMethods.bekle(2);
         us05.signIn.click();
         ReusableMethods.bekle(1);
->>>>>>> main
+
     }
 
     @And("Kullanici giris bilgilerini eksiksiz doldurur")
     public void kullaniciGirisBilgileriniEksiksizDoldurur() {
 
         us05.userNameBox.sendKeys("Cancikmaz",Keys.ENTER);
-<<<<<<< HEAD
-=======
         ReusableMethods.bekle(1);
->>>>>>> main
+
         us05.passwordBox.sendKeys("Ruhidayi.123",Keys.ENTER);
     }
 
     @And("kullanici randevularini görür")
     public void kullaniciRandevulariniGörür() {
         us05.myPageButton.click();
-<<<<<<< HEAD
+
         us05.myAppointmentButton.click();
-=======
+
         ReusableMethods.bekle(2);
         us05.myAppointmentButton.click();
         /*
@@ -140,7 +132,7 @@ public class Us05_Stepdefinition {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
->>>>>>> main
+
 
     }
 /*
