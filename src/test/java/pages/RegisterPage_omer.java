@@ -37,6 +37,20 @@ public class RegisterPage_omer {
     @FindBy(xpath = "//*[.='Registration Saved']")
     public WebElement regSavedAlert_o;
 
+    @FindBy(xpath = "//*[.='Your SSN is invalid']")
+    public WebElement invalidSSN_o;
+
+    @FindBy(xpath = "//*[.='Your SSN is required.']")
+    public WebElement requiredSSN_o;
+
+    @FindBy(xpath = "//*[.='Your FirstName is required.']")
+    public WebElement requiredFN_o;
+
+    @FindBy(xpath = "//*[.='Your LastName is required.']")
+    public WebElement requiredLN_o;
+
+    ////*[.='Your FirstName is required.']
+
     /*
     <div role="alert" class="Toastify__toast-body">Registration Saved</div>
     */
