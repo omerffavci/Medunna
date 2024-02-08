@@ -11,7 +11,6 @@ import pages.MedunnaPageFth;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-
 import utilities.ReusableMethods;
 
 
@@ -32,7 +31,9 @@ public class Us05_Stepdefinition {
         @Then("Make an Appointment sekmesine tiklar")
         public void makeAnAppointmentSekmesineTiklar() {
 
+
         ReusableMethods.bekle(2);
+
 
             us05.makeAppointmentButton.click();
 
@@ -91,10 +92,18 @@ public class Us05_Stepdefinition {
     public void kullaniciRegisterButonunaTiklar() {
 
         us05.giriskismi.click();
+
         ReusableMethods.bekle(2);
         us05.signIn.click();
         ReusableMethods.bekle(2);
 
+
+
+        us05.signIn.click();
+
+        ReusableMethods.bekle(2);
+        us05.signIn.click();
+        ReusableMethods.bekle(1);
 
     }
 
@@ -102,6 +111,7 @@ public class Us05_Stepdefinition {
     public void kullaniciGirisBilgileriniEksiksizDoldurur() {
 
         us05.userNameBox.sendKeys("Cancikmaz",Keys.ENTER);
+
 
 
         ReusableMethods.bekle(1);
@@ -112,6 +122,12 @@ public class Us05_Stepdefinition {
     @And("kullanici randevularini görür")
     public void kullaniciRandevulariniGörür() {
         us05.myPageButton.click();
+
+
+
+        us05.myAppointmentButton.click();
+
+
         ReusableMethods.bekle(2);
         us05.myAppointmentButton.click();
         ReusableMethods.bekle(2);
@@ -133,6 +149,9 @@ public class Us05_Stepdefinition {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+
+
 
 
     }
