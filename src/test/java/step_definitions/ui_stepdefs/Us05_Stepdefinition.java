@@ -3,7 +3,6 @@ package step_definitions.ui_stepdefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,10 +10,10 @@ import org.openqa.selenium.interactions.Actions;
 import pages.MedunnaPageFth;
 import utilities.ConfigReader;
 import utilities.Driver;
-<<<<<<< HEAD
-=======
+
+
 import utilities.ReusableMethods;
->>>>>>> main
+
 
 public class Us05_Stepdefinition {
 
@@ -26,46 +25,48 @@ public class Us05_Stepdefinition {
     public void kullaniciAnasayfayaGider(String url) {
 
         Driver.getDriver().get(ConfigReader.getProperty(url));
+        ReusableMethods.bekle(2);
 
     }
 
         @Then("Make an Appointment sekmesine tiklar")
         public void makeAnAppointmentSekmesineTiklar() {
 
-<<<<<<< HEAD
+        ReusableMethods.bekle(2);
 
-=======
->>>>>>> main
             us05.makeAppointmentButton.click();
 
         }
 
     @And("isim olarak {string} girer")
     public void isimOlarakGirer(String firstName) {
+        ReusableMethods.bekle(1);
         us05.firstNameBox.sendKeys(firstName);
     }
 
     @And("soy isim {string} girer")
     public void soyIsimGirer(String lastName) {
 
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
+
         us05.lastNameBox.sendKeys(lastName);
     }
 
     @And("SSN numarasi olarak {string} girer")
     public void ssnNumarasiOlarakGirer(String ssn) {
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
         us05.ssnBox.sendKeys(ssn);
     }
 
     @And("Email adresi olarak {string} girer")
     public void emailAdresiOlarakGirer(String email) {
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
         us05.emailBox.sendKeys(email);
     }
 
     @And("Telefon numarasi olarak {string} girer")
     public void telefonNumarasiOlarakGirer(String phone) {
+        ReusableMethods.bekle(1);
         us05.phoneBox.sendKeys(phone);
 
     }
@@ -73,7 +74,7 @@ public class Us05_Stepdefinition {
     @And("Appointment Date olarak {string} girer")
     public void appointmentDateOlarakGirer(String date) {
 
-
+    ReusableMethods.bekle(2);
         us05.appointmentDateBox.sendKeys(date);
 
     }
@@ -81,7 +82,7 @@ public class Us05_Stepdefinition {
     @Then("Send an Appointment Request butonuna tiklar.")
     public void sendAnAppointmentRequestButonunaTiklar() {
 
-
+    ReusableMethods.bekle(1);
         us05.sendAppointmentRequestButton.click();
 
     }
@@ -90,43 +91,35 @@ public class Us05_Stepdefinition {
     public void kullaniciRegisterButonunaTiklar() {
 
         us05.giriskismi.click();
-<<<<<<< HEAD
-
-        us05.signIn.click();
-=======
         ReusableMethods.bekle(2);
         us05.signIn.click();
-        ReusableMethods.bekle(1);
->>>>>>> main
+        ReusableMethods.bekle(2);
+
+
     }
 
     @And("Kullanici giris bilgilerini eksiksiz doldurur")
     public void kullaniciGirisBilgileriniEksiksizDoldurur() {
 
         us05.userNameBox.sendKeys("Cancikmaz",Keys.ENTER);
-<<<<<<< HEAD
-=======
+
+
         ReusableMethods.bekle(1);
->>>>>>> main
+
         us05.passwordBox.sendKeys("Ruhidayi.123",Keys.ENTER);
     }
 
     @And("kullanici randevularini görür")
     public void kullaniciRandevulariniGörür() {
         us05.myPageButton.click();
-<<<<<<< HEAD
-        us05.myAppointmentButton.click();
-=======
         ReusableMethods.bekle(2);
         us05.myAppointmentButton.click();
+        ReusableMethods.bekle(2);
         /*
->>>>>>> main
+
         String expected = "ID";
         String actual = us05.idYazisi.getText();
         Assert.assertEquals(expected,actual);
-
-<<<<<<< HEAD
-=======
          */
         us05.idYazisi.isDisplayed();
 
@@ -140,9 +133,25 @@ public class Us05_Stepdefinition {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
->>>>>>> main
+
 
     }
+
+    @And("{string} hata mesajini gorur.")
+    public void hataMesajiniGorur(String hata) {
+        ReusableMethods.bekle(2);
+        us05.firstNameRequiredFeedback.isDisplayed();
+    }
+
+
+    @And("Your SSN is required. hata mesajini gorur")
+    public void yourSSNIsRequiredHataMesajiniGorur() {
+        ReusableMethods.bekle(2);
+        us05.SSNRequiredFeedback.isDisplayed();
+
+    }
+
+
 /*
     @And("Kullanici {string} ve {string} girer")
     public void kullaniciVeGirer(String userName, String sifre) {
