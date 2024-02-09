@@ -58,6 +58,20 @@ public class RegisterPage_omer {
     @FindBy(xpath = "//*[.='Your email is required.']")
     public WebElement requiredEmail_o;
 
+    @FindBy(xpath = "//*[@style='background-color: rgb(255, 0, 0);']")
+    public WebElement redCol_o;
+
+    @FindBy(xpath = "//*[@style='background-color: rgb(255, 153, 0);']")
+    public WebElement orangeCol_o;
+
+    @FindBy(xpath = "//*[@style='background-color: rgb(153, 255, 0);']")
+    public WebElement greenCol_o;
+
+    @FindBy(xpath = "//*[@style='background-color: rgb(0, 255, 0);']")
+    public WebElement darkgreenCol_o;
+
+    //  //*[@style='background-color: rgb(255, 0, 0);']
+
 
     /*
     <div role="alert" class="Toastify__toast-body">Registration Saved</div>

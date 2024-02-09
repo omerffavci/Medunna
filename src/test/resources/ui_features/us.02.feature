@@ -1,4 +1,4 @@
-@UI
+
 Feature: US02 Registration yapilir
   Background: Register sayfasi acilir
     Given Kullanici "https://www.medunna.com/" ye giderr
