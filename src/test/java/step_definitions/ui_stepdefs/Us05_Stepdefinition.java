@@ -3,7 +3,6 @@ package step_definitions.ui_stepdefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,41 +24,50 @@ public class Us05_Stepdefinition {
     public void kullaniciAnasayfayaGider(String url) {
 
         Driver.getDriver().get(ConfigReader.getProperty(url));
+        ReusableMethods.bekle(2);
 
     }
 
         @Then("Make an Appointment sekmesine tiklar")
         public void makeAnAppointmentSekmesineTiklar() {
+
+
+        ReusableMethods.bekle(2);
+
+
             us05.makeAppointmentButton.click();
 
         }
 
     @And("isim olarak {string} girer")
     public void isimOlarakGirer(String firstName) {
+        ReusableMethods.bekle(1);
         us05.firstNameBox.sendKeys(firstName);
     }
 
     @And("soy isim {string} girer")
     public void soyIsimGirer(String lastName) {
 
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
+
         us05.lastNameBox.sendKeys(lastName);
     }
 
     @And("SSN numarasi olarak {string} girer")
     public void ssnNumarasiOlarakGirer(String ssn) {
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
         us05.ssnBox.sendKeys(ssn);
     }
 
     @And("Email adresi olarak {string} girer")
     public void emailAdresiOlarakGirer(String email) {
-        //Driver.getDriver().wait(1);
+        ReusableMethods.bekle(1);
         us05.emailBox.sendKeys(email);
     }
 
     @And("Telefon numarasi olarak {string} girer")
     public void telefonNumarasiOlarakGirer(String phone) {
+        ReusableMethods.bekle(1);
         us05.phoneBox.sendKeys(phone);
 
     }
@@ -67,7 +75,7 @@ public class Us05_Stepdefinition {
     @And("Appointment Date olarak {string} girer")
     public void appointmentDateOlarakGirer(String date) {
 
-
+    ReusableMethods.bekle(2);
         us05.appointmentDateBox.sendKeys(date);
 
     }
@@ -75,7 +83,7 @@ public class Us05_Stepdefinition {
     @Then("Send an Appointment Request butonuna tiklar.")
     public void sendAnAppointmentRequestButonunaTiklar() {
 
-
+    ReusableMethods.bekle(1);
         us05.sendAppointmentRequestButton.click();
 
     }
@@ -84,6 +92,11 @@ public class Us05_Stepdefinition {
     public void kullaniciRegisterButonunaTiklar() {
 
         us05.giriskismi.click();
+
+        ReusableMethods.bekle(2);
+        us05.signIn.click();
+        ReusableMethods.bekle(2);
+
 
 
         us05.signIn.click();
@@ -98,6 +111,9 @@ public class Us05_Stepdefinition {
     public void kullaniciGirisBilgileriniEksiksizDoldurur() {
 
         us05.userNameBox.sendKeys("Cancikmaz",Keys.ENTER);
+
+
+
         ReusableMethods.bekle(1);
 
         us05.passwordBox.sendKeys("Ruhidayi.123",Keys.ENTER);
@@ -107,16 +123,19 @@ public class Us05_Stepdefinition {
     public void kullaniciRandevulariniGörür() {
         us05.myPageButton.click();
 
+
+
         us05.myAppointmentButton.click();
+
 
         ReusableMethods.bekle(2);
         us05.myAppointmentButton.click();
+        ReusableMethods.bekle(2);
         /*
 
         String expected = "ID";
         String actual = us05.idYazisi.getText();
         Assert.assertEquals(expected,actual);
-
 
          */
         us05.idYazisi.isDisplayed();
@@ -133,7 +152,26 @@ public class Us05_Stepdefinition {
         }
 
 
+
+
+
     }
+
+    @And("{string} hata mesajini gorur.")
+    public void hataMesajiniGorur(String hata) {
+        ReusableMethods.bekle(2);
+        us05.firstNameRequiredFeedback.isDisplayed();
+    }
+
+
+    @And("Your SSN is required. hata mesajini gorur")
+    public void yourSSNIsRequiredHataMesajiniGorur() {
+        ReusableMethods.bekle(2);
+        us05.SSNRequiredFeedback.isDisplayed();
+
+    }
+
+
 /*
     @And("Kullanici {string} ve {string} girer")
     public void kullaniciVeGirer(String userName, String sifre) {

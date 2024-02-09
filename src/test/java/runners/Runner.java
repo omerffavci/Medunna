@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         "json:target/json-reports/cucumber.json",
         "junit:target/xml-report/cucumber.xml",
         "rerun:TestOutput/failed_scenerio.txt"},
-        features = "src/test/resources", //features package'ının yolu (content root)
+        features = "src/test/resources", //features package'ının yolu (content root
         glue = {"step_definitions","hooks"}, //stepDefinitions package ismi
         tags = "@UI",
         dryRun = false, //true seçersek scenariolari kontrol eder browser'ı çalıştırmaz
