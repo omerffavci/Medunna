@@ -3,7 +3,6 @@ package step_definitions.ui_stepdefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.RegisterPage_omer;
 import utilities.ConfigReader;
@@ -12,7 +11,7 @@ import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertEquals;
 
-public class Us1_sd {
+public class US01_sd {
     RegisterPage_omer registerPage_omer = new RegisterPage_omer();
     @Given("Kullanici {string} ye giderr")
     public void kullaniciYeGiderr(String arg0) {

@@ -112,13 +112,12 @@ public class Us05_Stepdefinition {
         ReusableMethods.bekle(2);
         us05.myAppointmentButton.click();
         /*
->>>>>>> main
+
         String expected = "ID";
         String actual = us05.idYazisi.getText();
         Assert.assertEquals(expected,actual);
 
-<<<<<<< HEAD
-=======
+
          */
         us05.idYazisi.isDisplayed();
 

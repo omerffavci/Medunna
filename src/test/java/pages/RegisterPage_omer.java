@@ -49,7 +49,15 @@ public class RegisterPage_omer {
     @FindBy(xpath = "//*[.='Your LastName is required.']")
     public WebElement requiredLN_o;
 
-    ////*[.='Your FirstName is required.']
+    @FindBy(xpath = "//*[.='Your username is required.']")
+    public WebElement requiredUN_o;
+
+    @FindBy(xpath = "//*[.='This field is invalid']")
+    public WebElement invalidEmail_o;
+
+    @FindBy(xpath = "//*[.='Your email is required.']")
+    public WebElement requiredEmail_o;
+
 
     /*
     <div role="alert" class="Toastify__toast-body">Registration Saved</div>
