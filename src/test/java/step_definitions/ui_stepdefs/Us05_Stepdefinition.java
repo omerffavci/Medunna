@@ -136,6 +136,7 @@ public class Us05_Stepdefinition {
         String expected = "ID";
         String actual = us05.idYazisi.getText();
         Assert.assertEquals(expected,actual);
+
          */
         us05.idYazisi.isDisplayed();
 
